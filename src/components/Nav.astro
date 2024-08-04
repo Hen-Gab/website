@@ -1,0 +1,66 @@
+---
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
+import Idioma from './Idioma.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<nav>
+	<div class="nav">
+		<div id="nav" class="nav__container">
+			<div id="nav" class="nav__logo">
+				<!-- texto provisório, substituir por logotipo -->
+				<a href="/"><span>hengab</span></a> 
+			</div>
+			<div id="nav" class="menu">
+				<ul id ="nav" class="menu__routes">
+					<li><a href=""><div class="menu__button">{t('nav.about')}</div></a></li>
+					<li><a href=""><div class="menu__button">{t('nav.projects')}</div></a></li>
+				</ul>
+				<div id="nav" class="menu__links">
+					<a href="https://github.com/Hen-Gab" target="_blank"><div class="nav__links__link" id="github">GitHub</div></a>
+				</div>
+				<Idioma />
+			</div>
+		</div>
+	</div>
+</nav>
+
+<style lang="scss">
+	nav {
+		margin-top: 2em;}
+
+	.nav {
+		margin: 0 auto;
+		max-width: 900px;
+
+		&__container{
+			padding: 0.6rem 2rem;
+			border-radius: 32px;
+			justify-content: space-between;
+			background: whitesmoke}}
+
+	.menu {
+		ul {
+			list-style-type: none;
+			
+			li {
+				margin-right: 1.6rem;}}
+		&__button {
+			padding: 0.6rem;
+			border-radius: 12px;
+			transition: .2s;
+			&:hover {
+				background: black;
+				color: white;}}}
+
+	#nav {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		a {
+			color: black;
+			text-decoration: none;}}
+</style>
