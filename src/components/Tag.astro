@@ -1,0 +1,46 @@
+---
+
+const { texto } = Astro.props;
+
+---
+
+<div class="tag">
+    <div class="tag__container">
+        <div id="icon"></div>
+        <span>{texto}</span>
+    </div>
+</div>
+
+<style lang="scss">
+    .tag {
+        width: fit-content;
+        cursor: pointer;
+        margin-bottom: 12px;
+
+        &__container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            padding: 8px 12px;
+            border-radius: 4px;
+            background: rgb(68, 68, 68);
+            
+            transition: 1s;
+
+            span {
+                font-size: 1rem;
+            }}}
+
+    .tag:hover {
+        &__container {
+            
+        }}
+
+    #icon {
+        width: 6px;
+        height: 6px;
+        margin-right: 12px;
+        border-radius: 100%;
+        background-color: white;}
+</style>
