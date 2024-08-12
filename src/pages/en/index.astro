@@ -1,45 +1,21 @@
 ---
-import Tag from '../../components/Tag.astro';
 import Layout from '../../layouts/Layout.astro';
+
+// Elementos
+import Tag from '../../components/Tag.astro';
+
+
 ---
 
 <Layout title="Gabriel Henrique's Website">
 	<main>
-		<div class="main__container">
-			<header>
-				<div class="header__container">
-					<div class="tags">
-						<div class="tags__container">
-							<Tag texto="Web Development" />
-							<Tag texto="Svelte" />
-							<Tag texto="Flask" />
-							<Tag texto="Digital Illustration" />
-							<Tag texto="Graphic Design" />
-							<Tag texto="Placeholder" />
-						</div>
-					</div>
-				</div>
-			</header>
-
-			<section>
-				<div class="section__container" id="projects"></div>
-			</section>
-
-			<section>
-				<div class="section__container" id="about"></div>
-			</section>
-
-			<footer>
-				<div class="footer_container"></div>
-			</footer>
+		<div class="container">
+			<article></article>
+			<section></section>
+			<article></article>
 		</div>
 	</main>
 </Layout>
  
 <style lang="scss">
-	.tags {
-		&__container {
-			display: grid;
-			grid-template-columns: repeat(3, 1fr);
-		}}
 </style>

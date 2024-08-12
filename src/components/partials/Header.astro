@@ -1,11 +1,13 @@
 ---
-import { getLangFromUrl, useTranslations, useTranslatedPath } from '../i18n/utils';
-import Idioma from './Idioma.astro';
+import { getLangFromUrl, useTranslations, useTranslatedPath } from '../../i18n/utils';
+import Idioma from '../Idioma.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const translatePath = useTranslatedPath(lang);
 ---
+
+<!-- irei polir brevemente, tá uma bagunça!! -->
 
 <nav>
 	<div class="nav">
@@ -16,8 +18,8 @@ const translatePath = useTranslatedPath(lang);
 			</div>
 			<div id="nav" class="menu">
 				<ul id ="nav" class="menu__routes">
-					<li><a href=""><div class="menu__button">{t('nav.about')}</div></a></li>
 					<li><a href=""><div class="menu__button">{t('nav.projects')}</div></a></li>
+					<li><a href=""><div class="menu__button">{t('nav.about')}</div></a></li>
 				</ul>
 				<div id="nav" class="menu__links">
 					<a href="https://github.com/Hen-Gab" target="_blank"><div class="nav__links__link" id="github">GitHub</div></a>
@@ -30,7 +32,8 @@ const translatePath = useTranslatedPath(lang);
 
 <style lang="scss">
 	nav {
-		margin-top: 2em;}
+		margin-top: 2em;
+		margin-bottom: 2em;}
 
 	.nav {
 		margin: 0 auto;

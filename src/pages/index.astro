@@ -1,12 +1,47 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+import Tag from '../components/Tag.astro';
+import Project from '../components/Project.astro';
 ---
 
 <Layout title="Site de Gabriel Henrique">
 	<main>
-        <p>Sim, o site está em desenvolvimento.</p>
+		<div class="container">
+			<article>
+				<div class="article" id="top">
+					<div class="article__left">
+						<span>Olá!<br>Sou </span><span>Gabriel Henrique</span>
+						<div class="tags">
+							<Tag />
+						</div>
+					</div>
+					<div class="article__right">
+						<!-- Inserir algum tipo de imagem que me represente -->
+					</div>
+				</div>
+			</article>
+			<section>
+				<div class="section" id="projects">
+					<span class="h1">Projetos</span>
+					<Project />
+				</div>
+			</section>
+			<article>
+				<div class="article" id="bottom">
+					<span class="h1">Sobre</span>
+					<div class="article__left"></div>
+					<div class="article__right"></div>
+				</div>
+			</article>
+		</div>
 	</main>
 </Layout>
  
-<style>
+<style lang="scss">
+	.container {
+		margin: 0 auto;
+		padding: 0 1.2rem;
+		max-width: 1000px;
+	}
 </style>
